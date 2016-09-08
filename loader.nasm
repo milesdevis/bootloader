@@ -23,7 +23,7 @@ DriveNo			dw 0		; Drive No: 0
 Signature		db 41		; Drive signature: 41 for floppy
 VolumeID		dd 12345678h	; Volume ID: any number
 VolumeLabel		db "My First OS"; Volume Label: any 11 chars
-FileSystem		db "FAT12   "	; File system type: don't change!
+FileSystem		db "FAT12   "	; File system type
 
 
 _start:
