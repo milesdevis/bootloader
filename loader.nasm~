@@ -1,4 +1,8 @@
-	
+%if 0; 
+ * Title: A Simple Bootloader in NASM
+ * Author: Osanda Malith Jayathissa (@OsandaMalith)
+ * Website: http://OsandaMalith.wordpress.com
+%endif; 	
 
 	BITS 16
 
@@ -6,7 +10,7 @@
 	nop	
 	
 ; Disk description table, to make it a valid floppy
-OEMLabel		db "NOS"	; Disk label
+OEMLabel		db "OsandaOS"	; Disk label
 BytesPerSector		dw 512		; Bytes per sector
 SectorsPerCluster	db 1		; Sectors per cluster
 ReservedForBoot		dw 1		; Reserved sectors for boot record
@@ -35,7 +39,7 @@ _start:
 
 	jmp $			; infinite loop!
 
-	string db "Welcome to N ", 0
+	string db "Welcome to @OsandaMalith's First OS :)", 0
 
 print_string:		
 	mov ah, 0Eh		; int 10h 'print char' function

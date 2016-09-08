@@ -1,2 +1,0 @@
-# bootloader
-My OS Stuff :)
