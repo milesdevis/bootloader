@@ -1,0 +1,7 @@
+1. Clone the repo and assemble loader.nasm using binary : nasm -f bin -o loader.bin loader.nasm
+
+2. Convert the binary image to floppy image:  dd status=noxfer conv=notrunc if= loader.bin of=floppy.flp
+
+3. Run the floppy on qemu. You can run it on KVM or any other virtualisation platform : qemu-system-i386 -fda floppy.flp
+
+
